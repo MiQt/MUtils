@@ -1,0 +1,31 @@
+class ImageUtils{
+
+public void getPixColor(){
+Bitmap src =  BitmapFactory.decodeResource(getResources(),R.drawable.imgbg);
+        int A, R, G, B;
+        int pixelColor;
+        int height = src.getHeight();
+        int width = src.getWidth();
+
+
+         for (int y = 0; y < height; y++) {
+             for (int x = 0; x < width; x++) {
+                 pixelColor = src.getPixel(x, y);
+                 A = Color.alpha(pixelColor);
+                 R = Color.red(pixelColor);
+                 G = Color.green(pixelColor);
+                 B = Color.blue(pixelColor);
+                 
+                 Log.e("A:", A+"");
+                 Log.e("R:", R+"");
+                 Log.e("G:", G+"");
+                 Log.e("B:", B+"");
+
+
+             }
+         }
+
+}
+
+
+}
